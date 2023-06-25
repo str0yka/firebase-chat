@@ -1,0 +1,50 @@
+@import "../../css/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 0;
+
+  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.03);
+
+  cursor: pointer;
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    span {
+      color: $attentionColor;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .leftSideSlogan {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .rightSide {
+    div {
+      height: 50px;
+      width: 50px;
+
+      border-radius: 50%;
+      background-color: $bodyColor;
+
+      cursor: pointer;
+    }
+  }
+}
