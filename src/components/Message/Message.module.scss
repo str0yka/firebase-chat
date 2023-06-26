@@ -1,0 +1,16 @@
+@import "../../css/variables";
+
+.Message {
+  min-width: 300px;
+  width: fit-content;
+  padding: 15px;
+
+  background-color: $bodyColor;
+  border-radius: 10px;
+
+  h4 {
+    color: #4FC154;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

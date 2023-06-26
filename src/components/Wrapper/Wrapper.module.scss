@@ -1,0 +1,16 @@
+@import "../../css/variables";
+
+.Wrapper {
+  margin: 20px auto;
+  padding-bottom: 30px;
+
+  max-width: 768px;
+  width: 100%;
+  min-height: 90vh;
+
+  background-color: $containerColor;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,79 @@
+@import "../../css/variables";
+
+.Chat {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
+
+  .ChatMessages {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ChatInput {
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 10px;
+    border: 1px solid $attentionColor;
+    background: #FFF;
+
+    transition: all .1s ease;
+
+    &:hover,
+    &:focus-within {
+      border: 1px solid darken($attentionColor, 20%);
+    }
+
+    input {
+      width: 100%;
+
+      border: none;
+      outline: none;
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 25px;
+
+      &::placeholder {
+        color: $attentionColor;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: none;
+      outline: none;
+      background: none;
+
+      svg {
+        width: 30px;
+        height: 30px;
+
+        cursor: pointer;
+
+        path {
+          fill: $attentionColor;
+          transition: fill .1s ease;
+        }
+
+        &:hover {
+          path {
+            fill: darken($attentionColor, 20%);
+          }
+        }
+      }
+    }
+  }
+}
