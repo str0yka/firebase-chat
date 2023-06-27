@@ -1,26 +1,22 @@
 import classes from './Message.module.scss'
-
-// export interface MessageData {
-//   createdAt: string
-//   displayName: string
-//   photoURL: string
-//   text: string
-//   uid: string
-// }
+import {useAuthState} from "react-firebase-hooks/auth";
+import {useContext} from "react";
+import {AppContext} from "../../main.tsx";
 
 interface MessageProps {
-  sendByCurrentUser?: boolean
   message: any
 }
 
-const Message = ({ sendByCurrentUser = false, message }: MessageProps) => {
-  const date = `${Math.floor(message.createdAt / 60 / 60) % 60}:${Math.floor(message.createdAt / 60) % 60}`
+const Message = ({ message }: MessageProps) => {
+  const { auth } = useContext(AppContext)
+  const [ user ] = useAuthState(auth)
+  const isMessageByCurrentUser: boolean = message.uid === user?.uid
 
   return (
-    <div className={classes.Message}>
-      <h4>{ message.displayName }</h4>
+    <div className={`${classes.Message} ${isMessageByCurrentUser && classes.SendByCurrentUser}`}>
+      { !isMessageByCurrentUser && <h4>{ message.displayName }</h4> }
       <p>{ message.text }</p>
-      <span>{ date }</span>
+      <span>{ '19:30' }</span>
     </div>
   );
 };

@@ -57,6 +57,8 @@
     border: 1px solid #ACACAC;
     background-color: $containerColor;
 
+    z-index: 1;
+
     .userInfo {
       h3 {
         font-size: 16px;

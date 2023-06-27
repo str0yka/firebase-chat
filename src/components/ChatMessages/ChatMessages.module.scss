@@ -1,0 +1,11 @@
+.ChatMessages {
+  flex-grow: 1;
+
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  overflow: auto;
+}
