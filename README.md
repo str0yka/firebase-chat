@@ -1,9 +1,10 @@
 # 🔥 FIREBASE-CHAT
 
-Конфигурация проекта (использовался t3 stack):
+Конфигурация проекта:
 
 - Typescript
 - React JS, React Router 
 - FireBase
 - ESLint
 - SCSS, Styled-Components
+- Vite
